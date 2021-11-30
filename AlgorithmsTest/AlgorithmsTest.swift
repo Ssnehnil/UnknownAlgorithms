@@ -20,5 +20,17 @@ class UnknownTest: XCTestCase {
             XCTAssertEqual(actual, testCase.expected)
         }
     }
+    
+    func testUnknownAlgorithmForModeOfSortedArray() {
+        
+        let testAlgorithm = UnknownAlgorithms()
+        
+        let testCases = [(input: [1,4,6,6,6,6,38,38,38,68,129,273], expected: 6), (input: [73], expected: 73), (input: [], expected: 0)]
+        
+        for testCase in testCases {
+            let actual = testAlgorithm.findMode(testCase.input)
+            XCTAssertEqual(actual, testCase.expected)
+        }
+    }
 
 }
